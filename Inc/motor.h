@@ -1,0 +1,17 @@
+#ifndef __MOTOR_H__
+#define __MOTOR_H__
+#include "main.h"
+
+#define MOTOR_CLK_PIN_HIGH()	HAL_GPIO_WritePin(MOTOR_CLK_PORT,MOTOR_CLK_PIN,GPIO_PIN_SET)
+#define MOTOR_CLK_PIN_LOW()	  HAL_GPIO_WritePin(MOTOR_CLK_PORT,MOTOR_CLK_PIN,GPIO_PIN_RESET)
+
+#define MOTOR_DIR_PIN_HIGH()  HAL_GPIO_WritePin(MOTOR_DIR_PORT,MOTOR_DIR_PIN,GPIO_PIN_SET)
+#define MOTOR_DIR_PIN_LOW()		HAL_GPIO_WritePin(MOTOR_DIR_PORT,MOTOR_DIR_PIN,GPIO_PIN_RESET)
+
+
+void Motor_Init();
+void Motor_Run();
+
+void Test();
+
+#endif
